@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="maincontainer">
+            <div id="display">
+                <button onclick="makeRows(16,16)">Click me to display the board!</button>
+             </div>
+             <div id="bottom">
+                <button onclick="removeBoard()">Clear</button>
+            </div>
+            <div id="free">
+                <button onclick="freedraw(16,16)">Click me to draw what u like!</button>
+            </div>
+            <div id="top">
+                <div id="getnum">
+                    row: <input type="number" name="a" id="a"><br> col: <input type="number" name="b" id="b"><br>
+                </div>
+                <div id="changelayout" >
+                    <button onclick="makeRows(document.getElementById('a').value, document.getElementById('b').value)">Set etch-a-sketch</button>
+                </div>
+            </div>
+
+            <div id="toinsert">
+                
+            </div>
+        
+        <div id="colors">
+            <button id="colory" onclick="applyColors()">Colors!</button>
+        </div>
+        <div id="black">
+            <button id="blacky" onclick="applyBlack()">Black!</button>
+        </div>
+            
+        </div>
+        
+        
+    </div>
+    
+</body>
+<script src="component.js"></script>
+</html>

@@ -1,0 +1,84 @@
+:root {
+  --grid-cols: 1;
+  --grid-rows: 1;
+}
+#maincontainer{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+  ". setCustom setCustom . "
+  "side main main color"
+  "side main main color"
+  "freedraw clear clear display"
+  ;
+  min-height: 100%; 
+  width: 100%;
+}
+
+#top{
+  grid-area: setCustom;
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+}
+
+#colors{
+  grid-area: color;
+  justify-self: center;
+}
+
+#container {                                
+  display: grid;
+  grid-column: 1;
+  grid-template-rows: repeat(var(--grid-rows), 1fr);
+  grid-template-columns: repeat(var(--grid-cols), 1fr);
+}
+
+#freedraw{                               
+  display: grid;
+  grid-column: 1;
+  grid-template-rows: repeat(var(--grid-rows), 1fr);
+  grid-template-columns: repeat(var(--grid-cols), 1fr);
+}
+
+
+
+
+
+
+.grid-item {                              
+  padding: 20px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+#display{
+  grid-area: display; 
+}
+#bottom{
+  grid-area: clear;
+  justify-self: center;
+  align-self: center;
+}
+
+#free{
+  grid-area: freedraw;
+}
+
+#toinsert{
+  grid-area: main;
+  
+ 
+}
+
+#black{
+  grid-area: side ;
+  justify-self: center;
+}
